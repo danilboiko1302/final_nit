@@ -250,7 +250,7 @@ var e = {};
         t.innerHTML = " ";
         for (var e = 0; e < n.length; e++) {
             var o = "";
-            null != n[e].special_price && (o = "Special price: " + n[e].special_price), t.innerHTML += '<div class="col-md-12 container-product"><div class="product"><button style="border: none" class="btn" data-toggle="modal" data-target="#container-products' + n[e].id + '"><img src="' + n[e].image_url + '" class="img-fluid" style="max-height: 200px"></button><div class="modal" id="container-products' + n[e].id + '" style="background-color: rgba(0, 0, 0, 0.3)"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><h4 class="modal-title">' + n[e].name + '</h4><button type="button" class="close" data-dismiss="modal">&times;</button></div><div class="modal-body">' + n[e].description + '<img src="' + n[e].image_url + '" class="img-fluid" style="max-height: 250px"></div><div class="modal-footer"><button type="button" class="btn btn-danger" data-dismiss="modal">Close</button></div></div></div></div></div><div class="text-product"><p>' + n[e].name + "</p><br>" + n[e].price + " UAH<br>" + o + '</div><div class="button-group"><button class="btn red-button addToCart" id = ' + n[e].id + ' style="width: 90%">Buy</button></div></div>'
+            null != n[e].special_price && (o = "Special price: " + n[e].special_price), t.innerHTML += '<div class="col-md-12 container-product" style="margin-top: 150px;" ><div class="product"><button style="border: none" class="btn" data-toggle="modal" data-target="#container-products' + n[e].id + '"><img src="' + n[e].image_url + '" class="img-fluid" style="max-height: 300px"></button><div class="modal" id="container-products' + n[e].id + '" style="background-color: rgba(0, 0, 0, 0.3)"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><h4 class="modal-title">' + n[e].name + '</h4><button type="button" class="close" data-dismiss="modal">&times;</button></div><div class="modal-body">' + n[e].description + '<img src="' + n[e].image_url + '" class="img-fluid" style="max-height: 250px"></div><div class="modal-footer"><button type="button" class="btn btn-danger" data-dismiss="modal">Close</button></div></div></div></div></div><div class="text-product"><p>' + n[e].name + "</p>" + n[e].price + " UAH" + o + '</div><div class="button-group"><button class="btn red-button addToCart" style="font-size: 40px" id = ' + n[e].id + ' style="width: 90%">Buy</button></div></div>'
         }
     }
 
@@ -382,6 +382,15 @@ var e = {};
                 }
             })
         }()
+       // debugger;
+        var aaaa = document.getElementsByClassName('cart-items')[0].children;
+        var ttt = aaaa.length;
+        for(var aa = 0 ;aa<ttt;aa++)
+        {
+            aaaa[0].remove();
+        }
+        u = [];
+            check()
     }), window.onclick = function (t) {
        // t.clientX > 500 && i()
     };

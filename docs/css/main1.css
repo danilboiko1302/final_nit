@@ -284,11 +284,16 @@ ul a:hover {
   font-family: "Trajan Pro", serif;
   color: rgba(191, 212, 225, 0.8);;
   padding-top: 5px;
-  position: fixed;
+
   bottom: 0;
 
 }
-
+.text-product, .addToCart, .red-button{
+  font-size: 40px;
+}
+.btn{
+  font-size: 40px;
+}
 #buttonToSubmit{
   background: rgb(159, 195, 216);
   color:white;
